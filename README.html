@@ -1,0 +1,509 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E5%B7%A5%E5%85%B7%E5%8C%85%E7%AE%A1%E7%90%86%E8%A7%84%E8%8C%83">&#x5DE5;&#x5177;&#x5305;&#x7BA1;&#x7406;&#x89C4;&#x8303;</h1>
+
+<h2 class="mume-header" id="%E5%8C%85%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83">&#x5305;&#x547D;&#x540D;&#x89C4;&#x8303;</h2>
+
+<p>&#x91C7;&#x7528;&#x4F5C;&#x7528;&#x57DF;&#x547D;&#x540D;&#xFF08;@+npm&#x7528;&#x6237;&#x540D;&#xFF09;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>// &#x5047;&#x8BBE;&#x539F;&#x5148;&#x7684;&#x5305;&#x540D;&#x5982;&#x4E0B;&#xFF08;&#x91C7;&#x7528;name-name&#x7684;&#x89C4;&#x5219;&#x53EF;&#x4EE5;&#x66F4;&#x52A0;&#x7684;&#x4E00;&#x76EE;&#x4E86;&#x7136;&#xFF09;
+{
+  name: &apos;local-storage&apos;
+}
+// &#x6539;&#x9020;&#x540E;&#xFF0C;&#x901A;&#x8FC7; --access=public &#x65B9;&#x5F0F;&#x516C;&#x6709;&#x5316;
+{
+  name: &apos;@name/local-storage&apos;
+}
+</code></pre><h2 class="mume-header" id="%E7%89%88%E6%9C%AC%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99">&#x7248;&#x672C;&#x547D;&#x540D;&#x89C4;&#x5219;</h2>
+
+<pre data-role="codeBlock" data-info class="language-"><code>x.y.z-[state]
+</code></pre><ul>
+<li>x.y.z &#x4E3A;&#x5404;&#x7248;&#x672C;&#x7684;&#x5E8F;&#x53F7;&#xFF0C;&#x9075;&#x5FAA; semver &#x89C4;&#x8303;</li>
+<li>state &#x53EF;&#x9009;&#x5B57;&#x6BB5;&#xFF0C;&#x8868;&#x793A;&#x7248;&#x672C;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6BD4;&#x5982; b &#x53EF;&#x4EE5;&#x8868;&#x793A; beta &#x6D4B;&#x8BD5;&#x7248;</li>
+</ul>
+<h2 class="mume-header" id="%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99">&#x8BED;&#x4E49;&#x5316;&#x7248;&#x672C;&#x547D;&#x540D;&#x89C4;&#x5219;</h2>
+
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x683C;&#x5F0F;&#x8981;&#x6C42;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>&#x975E;&#x8D1F;&#x6574;&#x6570;</td>
+<td>&#x4E3B;&#x7248;&#x672C;&#x53F7;(major)&#xFF0C;&#x8FDB;&#x884C;&#x4E0D;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#x7684;&#x4FEE;&#x6539;&#x65F6;&#xFF0C;&#x9012;&#x589E;&#x4E3B;&#x7248;&#x672C;&#x53F7;</td>
+</tr>
+<tr>
+<td>y</td>
+<td>&#x975E;&#x8D1F;&#x6574;&#x6570;</td>
+<td>&#x6B21;&#x7248;&#x672C;&#x53F7;(minor)&#xFF0C;&#x4FDD;&#x6301;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x65B0;&#x589E;&#x7279;&#x6027;&#x65F6;&#xFF0C;&#x9012;&#x589E;&#x6B21;&#x7248;&#x672C;&#x53F7;</td>
+</tr>
+<tr>
+<td>z</td>
+<td>&#x975E;&#x8D1F;&#x6574;&#x6570;</td>
+<td>&#x4FEE;&#x8BA2;&#x53F7;(patch)&#xFF0C;&#x4FDD;&#x6301;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x4FEE;&#x590D;&#x95EE;&#x9898;&#x4F46;&#x662F;&#x4E0D;&#x5F71;&#x54CD;&#x7279;&#x6027;&#x65F6;&#xFF0C;&#x9012;&#x589E;&#x4FEE;&#x8BA2;&#x53F7;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>0.y.z &#x8868;&#x793A;&#x5F00;&#x53D1;&#x9636;&#x6BB5;&#xFF0C;&#x975E;&#x7A33;&#x5B9A;&#x7248;&#x672C;&#xFF0C;&#x968F;&#x65F6;&#x53EF;&#x53D8;</li>
+<li>1.0.0 &#x8868;&#x793A;&#x521D;&#x59CB;&#x7A33;&#x5B9A;&#x7248;&#x672C;&#xFF0C;&#x540E;&#x7EED;&#x4E00;&#x5207;&#x6025;&#x4E8E;&#x6B64;&#x7248;&#x672C;&#x8FDB;&#x884C;&#x4FEE;&#x6539;</li>
+</ul>
+<h2 class="mume-header" id="%E7%89%88%E6%9C%AC%E7%8A%B6%E6%80%81">&#x7248;&#x672C;&#x72B6;&#x6001;</h2>
+
+<table>
+<thead>
+<tr>
+<th>&#x63CF;&#x8FF0;&#x65B9;&#x5F0F;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>alpha&#x7248;</td>
+<td>&#x5185;&#x90E8;&#x6D4B;&#x8BD5;&#x7248;&#x672C;&#xFF0C;bug&#x591A;</td>
+</tr>
+<tr>
+<td>b</td>
+<td>beta&#x7248;</td>
+<td>&#x516C;&#x6D4B;&#x7248;&#x672C;&#xFF0C;&#x7ED9;&#x5916;&#x90E8;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x6709;&#x7F3A;&#x9677;</td>
+</tr>
+<tr>
+<td>rc</td>
+<td>release candidate</td>
+<td>&#x9884;&#x53D1;&#x7248;&#x672C;&#xFF0C;&#x89E3;&#x51B3;&#x5927;&#x90E8;&#x5206;bug</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="%E7%89%88%E6%9C%AC%E9%99%90%E5%AE%9A">&#x7248;&#x672C;&#x9650;&#x5B9A;</h2>
+
+<p>&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A; <code>[&#x8303;&#x56F4;&#x63CF;&#x8FF0;]&lt;&#x7248;&#x672C;&#x53F7;&#x63CF;&#x8FF0;&gt;</code></p>
+<ul>
+<li><code>&lt;</code> &#x5C0F;&#x4E8E;&#x67D0;&#x4E00;&#x7248;&#x672C;&#x53F7;</li>
+<li><code>&lt;=</code> &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x67D0;&#x4E00;&#x7248;&#x672C;&#x53F7;</li>
+<li><code>&gt;</code> &#x5927;&#x4E8E;&#x67D0;&#x4E00;&#x7248;&#x672C;&#x53F7;</li>
+<li><code>&gt;=</code> &#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x67D0;&#x4E00;&#x7248;&#x672C;&#x53F7;</li>
+<li><code>=</code> &#x7B49;&#x4E8E;&#x67D0;&#x4E00;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5199;</li>
+<li><code>~</code> &#x57FA;&#x4E8E;&#x7248;&#x672C;&#x53F7;&#x63CF;&#x8FF0;&#x7684;&#x6700;&#x65B0;&#x8865;&#x4E01;&#x7248;&#x672C;&#xFF08;&#x662F;&#x786E;&#x4FDD;&#x7248;&#x672C;&#x517C;&#x5BB9;&#x6027;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x5BF9;&#x8865;&#x4E01;&#x53F7;&#x7684;&#x7EA6;&#x675F;&#xFF09;</li>
+<li><code>^</code> &#x57FA;&#x4E8E;&#x7248;&#x672C;&#x53F7;&#x63CF;&#x8FF0;&#x7684;&#x6700;&#x65B0;&#x517C;&#x5BB9;&#x7248;&#x672C;&#xFF08;&#x662F;&#x786E;&#x4FDD;&#x7248;&#x672C;&#x517C;&#x5BB9;&#x6027;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x5BF9;&#x6B21;&#x7248;&#x672C;&#x53F7;&#x7684;&#x9650;&#x5B9A;&#x7EA6;&#x675F;&#xFF09;</li>
+<li><code>-</code> &#x67D0;&#x4E2A;&#x8303;&#x56F4;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210; <code>&lt;&#x7248;&#x672C;&#x63CF;&#x8FF0;&gt;-&lt;&#x7248;&#x672C;&#x63CF;&#x8FF0;&gt;</code></li>
+</ul>
+<h2 class="mume-header" id="%E5%A6%82%E4%BD%95%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6%E5%B9%B6%E5%8F%91%E5%B8%83">&#x5982;&#x4F55;&#x5C01;&#x88C5;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x5E76;&#x53D1;&#x5E03;</h2>
+
+<p><code>Lerna</code>&#x662F;&#x4E00;&#x4E2A;&#x7BA1;&#x7406;&#x591A;&#x4E2A;npm&#x6A21;&#x5757;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x4F18;&#x5316;&#x7EF4;&#x62A4;&#x591A;&#x5305;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#xFF0C;&#x89E3;&#x51B3;&#x591A;&#x4E2A;&#x5305;&#x4E92;&#x76F8;&#x4F9D;&#x8D56;&#x4EE5;&#x53CA;&#x624B;&#x52A8;&#x53D1;&#x5E03;&#x591A;&#x4E2A;&#x5305;&#x7684;&#x95EE;&#x9898;&#x3002;<br>
+&#x57FA;&#x672C;&#x7684;&#x4ED3;&#x5E93;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>lerna-demo/
+  |--packages/
+    |-- package-a/
+      |-- ...
+      |-- package.json
+    |-- package-b/
+      |-- ...
+      |-- package.json
+  |-- ...
+  |-- lerna.json
+  |-- package.json
+</code></pre><ul>
+<li>&#x901A;&#x8FC7; <code>lerna create</code> &#x521B;&#x5EFA;&#x5305;</li>
+<li>&#x901A;&#x8FC7; <code>lerna add</code> &#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</li>
+</ul>
+<pre data-role="codeBlock" data-info class="language-"><code># &#x7ED9;&#x6240;&#x6709;&#x7684; package &#x6DFB;&#x52A0; lodash &#x6A21;&#x5757;
+$ lenra add lodash
+
+# &#x7ED9; package-a &#x6DFB;&#x52A0; moment &#x6A21;&#x5757;
+$ lerna add moment --scope package-a
+
+# &#x5185;&#x90E8;&#x6A21;&#x5757;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x6DFB;&#x52A0;
+$ lerna add package-a --scope package-b
+</code></pre><ul>
+<li>&#x901A;&#x8FC7; <code>lerna boostrap</code> &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; <code>--hoist</code> &#x6765;&#x628A;&#x6BCF;&#x4E2A; package &#x4E0B;&#x7684;&#x76F8;&#x540C;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x63D0;&#x5347;&#x5230;&#x5DE5;&#x7A0B;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x964D;&#x4F4E;&#x5B89;&#x88C5;&#x4EE5;&#x53CA;&#x7BA1;&#x7406;&#x6210;&#x672C;</li>
+<li>&#x901A;&#x8FC7; <code>lerna clean</code> &#x5220;&#x9664;&#x4F9D;&#x8D56;</li>
+<li>&#x901A;&#x8FC7; <code>lerna publish</code> &#x53D1;&#x5E03;</li>
+</ul>
+<h2 class="mume-header" id="%E6%8B%93%E5%B1%95">&#x62D3;&#x5C55;</h2>
+
+<p><code>Lerna</code> &#x4E0D;&#x8D1F;&#x8D23;&#x6784;&#x5EFA;&#xFF0C;&#x6D4B;&#x8BD5;&#x4E4B;&#x7C7B;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x79CD;&#x96C6;&#x4E2D;&#x7BA1;&#x7406; package &#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x5957;&#x81EA;&#x52A8;&#x5316;&#x7BA1;&#x7406;&#x7A0B;&#x5E8F;&#x800C;&#x5DF2;&#x3002;&#x7B80;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x5C31;&#x53EF;&#x4EE5;&#x638C;&#x63A7;&#x5230;&#x5177;&#x4F53;&#x7EC4;&#x4EF6;&#x91CC;&#x7684;&#x7EF4;&#x62A4;&#x3002;</p>
+<h3 class="mume-header" id="%E7%BB%9F%E4%B8%80%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83">&#x7EDF;&#x4E00;&#x63D0;&#x4EA4;&#x89C4;&#x8303;</h3>
+
+<ol>
+<li>commitizen &#x548C; cz-lerna-changelog<br>
+&#x901A;&#x8FC7; <code>commitizen</code> &#x683C;&#x5F0F;&#x5316; <code>git commit message</code>&#xFF0C;&#x901A;&#x8FC7;&#x8BE2;&#x95EE;&#x65B9;&#x5F0F;&#x6765;&#x5B8C;&#x6210;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>$ cnpm i -D commitizen
+$ cnpm i -D cz-lerna-changelog
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>// package.json
+{
+  &quot;name&quot;: &quot;root&quot;,
+  &quot;private&quot;: true,
+  &quot;scripts&quot;: {
+    &quot;c&quot;: &quot;git-cz&quot;
+  },
+  &quot;config&quot;: {
+    &quot;commitizen&quot;: {
+      &quot;path&quot;: &quot;./node_modules/cz-lerna-changelog&quot;
+    }
+  },
+  &quot;devDependencies&quot;: {
+    &quot;commitizen&quot;: &quot;^3.1.1&quot;,
+    &quot;cz-lerna-changelog&quot;: &quot;^2.0.2&quot;,
+    &quot;lerna&quot;: &quot;^3.15.0&quot;
+  }
+}
+</code></pre><ol start="2">
+<li>commitlint &#x548C; husky<br>
+&#x5BF9;&#x624B;&#x52A8;&#x7684; <code>git commit -m message</code> &#x8FDB;&#x884C;&#x4FE1;&#x606F;&#x7684;&#x6821;&#x9A8C;&#xFF0C;&#x4E0D;&#x7B26;&#x5408;&#x5C31;&#x4E0D;&#x8BA9;&#x63D0;&#x4EA4;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x793A;&#x95EE;&#x9898;&#x6240;&#x5728;&#x3002;&#x68C0;&#x9A8C;&#x7684;&#x5DE5;&#x4F5C;&#x662F;&#x7531; <code>commitlint</code> &#x5B8C;&#x6210;&#xFF0C;&#x901A;&#x8FC7; <code>husky</code> &#x6765;&#x6307;&#x5B9A;&#x6821;&#x9A8C;&#x7684;&#x65F6;&#x673A;&#x3002;</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code># &#x5B89;&#x88C5; commitlint &#x548C;&#x9075;&#x5B88;&#x7684;&#x89C4;&#x8303;
+$ cnpm i -D @commitlint/cli @commitlint/config-conventional
+</code></pre><p>&#x5728;&#x5DE5;&#x7A0B;&#x6839;&#x76EE;&#x5F55;&#x6DFB;&#x52A0; <code>commitlint.config.js</code> &#x4E3A; <code>commitlint</code> &#x6307;&#x5B9A;&#x76F8;&#x5E94;&#x7684;&#x89C4;&#x8303;</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">extends</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;@commitlint/config-conventional&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><pre data-role="codeBlock" data-info class="language-"><code>$ cnpm i -D husky
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>// &#x5728; package.json &#x4E2D;&#x589E;&#x52A0;&#x914D;&#x7F6E;
+&quot;husky: {
+  &quot;hooks&quot;: {
+    &quot;commit-msg&quot;: &quot;commitlint -E HUSKY_GIT_PARAMS&quot;
+  }
+}
+</code></pre><ol start="3">
+<li>standardjs &#x548C; lint-staged<br>
+&#x901A;&#x8FC7; <code>linter</code> &#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x4FEE;&#x6B63;&#xFF0C;&#x5E76;&#x4E14;&#x68C0;&#x67E5;&#x6682;&#x5B58;&#x533A;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5BF9;&#x6682;&#x5B58;&#x533A;&#x4E2D;&#x7684;js&#x6587;&#x4EF6;&#x6267;&#x884C; <code>standard --fix</code> &#x6821;&#x9A8C;&#x5E76;&#x4E14;&#x81EA;&#x52A8;&#x4FEE;&#x590D;&#xFF0C;&#x7528; <code>husky</code> &#x7684;&#x94A9;&#x5B50;&#xFF08;<code>pre-commit</code>&#xFF09;&#x6765;&#x6267;&#x884C; <code>lint-staged</code> &#x7684;&#x6821;&#x9A8C;&#x64CD;&#x4F5C;</li>
+</ol>
+<pre data-role="codeBlock" data-info class="language-"><code>$ cnpm i -D standard lint-staged
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>// package.json
+{
+  &quot;husky: {
+    &quot;hooks&quot;: {
+      &quot;pre-commit&quot;: &quot;lint-staged&quot;,
+      &quot;commit-msg&quot;: &quot;commitlint -E HUSKY_GIT_PARAMS&quot;
+    }
+  },
+  &quot;lint-staged&quot;: {
+    &quot;*.js&quot;: [
+      &quot;standard --fix&quot;,
+      &quot;git add&quot;
+    ]
+  }
+}
+</code></pre><h3 class="mume-header" id="%E7%94%9F%E6%88%90%E6%97%A5%E5%BF%97">&#x751F;&#x6210;&#x65E5;&#x5FD7;</h3>
+
+<p><code>lerna publish</code> &#x7684;&#x65F6;&#x5019;&#x505A;&#x4E86;&#x54EA;&#x4E9B;&#x4E8B;&#x60C5;</p>
+<ol>
+<li>&#x627E;&#x51FA;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x53D1;&#x5E03;&#x4EE5;&#x6765;&#x6709;&#x53D8;&#x66F4;&#x8FC7;&#x7684; package</li>
+<li>&#x786E;&#x5B9A;&#x8981;&#x53D1;&#x5E03;&#x7684;&#x7248;&#x672C;&#x53F7;</li>
+<li>&#x628A;&#x6240;&#x6709;&#x66F4;&#x65B0;&#x8FC7;&#x7684;package&#x4E2D;&#x7684;package.json&#x7684;version&#x66F4;&#x65B0;</li>
+<li>&#x66F4;&#x65B0;lerna.json&#x4E2D;&#x7684;version&#x5B57;&#x6BB5;</li>
+<li>&#x63D0;&#x4EA4;&#x4FEE;&#x6539;&#xFF0C;&#x6253;tag</li>
+<li>&#x63A8;&#x9001;&#x5230;git&#x4ED3;&#x5E93;</li>
+</ol>
+<p>CHANGELOG&#x662F;&#x548C;version&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x53C2;&#x6570;<code>--conventional-commits</code>&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;lerna&#x81EA;&#x52A8;&#x751F;&#x6210;&#x65E5;&#x5FD7;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>{
+  &quot;packages&quot;: [
+    &quot;packages/*&quot;
+  ],
+  &quot;command&quot;: {
+    &quot;bootstrap&quot;: {
+      &quot;hoist&quot;: true
+    },
+    &quot;version&quot;: {
+      &quot;conventionalCommits&quot;: true
+    }
+  },
+  &quot;ignoreChanges&quot;: [
+    &quot;**/*.md&quot;
+  ],
+  &quot;version&quot;: &quot;0.0.1-alpha&quot;
+}
+</code></pre><h3 class="mume-header" id="%E7%BC%96%E8%AF%91-%E6%89%93%E5%8C%85-%E8%B0%83%E8%AF%95">&#x7F16;&#x8BD1;&#x3001;&#x6253;&#x5305;&#x3001;&#x8C03;&#x8BD5;</h3>
+
+<p>&#x91C7;&#x7528;&#x56FA;&#x5B9A;&#x7EDF;&#x4E00;&#x7684;package&#x7ED3;&#x6784;</p>
+<ol>
+<li>package &#x5165;&#x53E3;&#x7EDF;&#x4E00;&#x4E3A; index.js</li>
+<li>package &#x6E90;&#x7801;&#x5165;&#x53E3;&#x7EDF;&#x4E00;&#x4E3A; src/index.js</li>
+<li>package &#x7F16;&#x8BD1;&#x5165;&#x53E3;&#x7EDF;&#x4E00;&#x4E3A; dist/index.js</li>
+<li>package &#x7EDF;&#x4E00;&#x4F7F;&#x7528;es6&#x8BED;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7; Babel&#xFF0C;webpack &#x7F16;&#x8BD1;&#x3001;&#x538B;&#x7F29;&#x8F93;&#x51FA;&#x5230;dist</li>
+<li>package &#x53D1;&#x5E03;&#x7684;&#x65F6;&#x5019;&#x53EA;&#x53D1;&#x5E03;dist&#xFF0C;&#x4E0D;&#x53D1;&#x5E03;src</li>
+<li>package &#x4E2D;&#x6CE8;&#x5165; LOCAL_DEBUG &#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x5728;index.js&#x533A;&#x5206;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x548C;&#x53D1;&#x5E03;&#x73AF;&#x5883;&#xFF0C;&#x8C03;&#x8BD5;&#x73AF;&#x5883; <code>require(./src/index)</code> &#x4FDD;&#x8BC1;&#x6E90;&#x7801;&#x53EF;&#x4EE5;&#x8C03;&#x8BD5;&#xFF0C;&#x53D1;&#x5E03;&#x73AF;&#x5883; <code>require(./dist/index)</code> &#x4FDD;&#x8BC1;&#x6E90;&#x7801;&#x4E0D;&#x88AB;&#x53D1;&#x5E03;</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

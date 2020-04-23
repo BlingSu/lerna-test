@@ -1,0 +1,32 @@
+{
+  "name": "@angelasu/mobile-header",
+  "version": "0.0.1",
+  "description": "支持移动端，pc端ie9的顶部组件",
+  "keywords": [
+    "mobile-header"
+  ],
+  "author": "angelasubi <21978301@qq.com>",
+  "homepage": "https://github.com/angelasubi/lerna-test#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelasubi/lerna-test.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/angelasubi/lerna-test/issues"
+  }
+}
