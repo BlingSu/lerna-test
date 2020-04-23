@@ -1,6 +1,6 @@
 {
   "name": "@angelasu/mobile-header",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "支持移动端，pc端ie9的顶部组件",
   "keywords": [
     "mobile-header"
